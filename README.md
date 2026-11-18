@@ -27,9 +27,6 @@ import numpy as np
 prior_probs=np.array([0.5,0.1,0.4])
 transition_probs=np.array([[0.5,0.3,0.2],[0.4,0.2,0.4],[0.0,0.3,0.7]])
 emission_probs=np.array([[0.1,0.9],[0.4,0.6],[0.8,0.2]])
-#0-->HAPPY
-#1-->SAD
-#transitionprobs-->0-->rainy,1-->cloudy,2--->sunny
 observationseq=[0,1,0,1]
 alpha=np.zeros((len(observationseq),len(prior_probs)))
 alpha[0,:]=prior_probs*emission_probs[:,observationseq[0]]
